@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## 정상동작
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 정희헌
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+#### 파이어베이스 서비스의 종류 및 특징
 
-### `npm start`
+```
+1. 인증
+2. 데이터베이스
+3. 스토리지
+4. 원격 구성
+5. 푸시 알람
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> 1. 인증 시스템을 지원한다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+인증은 우리가 알고 있는 로그인 하는 부분을 말한다. 이를 직접 서버로 개발할 경우 매우 복잡한데, 그 이유는 인증된 사용자인지 확인하는 세션처리에서 그 세션으로 데이터베이스와 저장소에 접근해도 문제가 없는지 확인하는 보안처리, 비밀번호 찾기, 아이디 찾기, 비밀번호 변경 등등 복잡한 것들을 구현해야 한다. 그러나 FireBase는 이를 모두 제공하고 있다.
+```
 
-### `npm test`
+> 2. NoSQl 기반의 3세대 데이터베이스이다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+NoSQL기반 데이터베이스의 Document DB는, 현재 많이 사용되는 오라클이나 MySQL 같은 관계형 데이터베이스보다 빠르고 간편하다.
+또한 FireBase는 다른 데이터 베이스들과 다르게 RTSP(Real Time Stream Protocol) 방식의 데이터베이스를 지원하고 있다. RTSP는 말그대로 실시간으로 데이터들을 전송해주는 방식이다. 이 방식을 사용하면 소켓 기반 서버를 만들어서 통신하는 것 보다 훨씬 코드 양이 줄게되어 코드 몇 줄로도 원하는 구성을 만들 수 있습니다.
+```
 
-### `npm run build`
+> 3. 원격 구성을 지원한다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+원격구성이란 원격으로 앱의 환경 상태를 구성하는 것을 말한다.
+앱의 배경화면 테마나 폰트를 바꾼다던가, 업데이트창과 알림창을 띄우고 앱의 환경을 원격으로 구성할 때 사용하는 기능이다.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> 4. 콘솔을 제공한다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+콘솔이란 쉽게 말해서 서버 관리자 페이지라고 생각하면 된다.
+앱의 서버를 만들게 되면 리눅스, FTP, MySQL(데이터베이스), Node.JS 서버 혹은 Spring 서버, 푸시보내기 API만 구축할 것이 아니라 이 모든 것을 관리할 수 있는 관리자 페이지가 필요하다.
+리눅스나 데이터베이스, 서버를 다룰 줄 안다면 관리자 페이지가 필요없을 수도 있지만 그렇지 경우를 위해, 그리고 접근 보안을 위해서 관리자 페이지를 만들어야 한다. 그럼 앱을 만들기 위해서 앱개발자 뿐아니라 서버 개발자까지 필요해지는데, FireBase는 이를 지원해주어 그럴 필요 없어지는 것이다.
+```
 
-### `npm run eject`
+> 5. Analytics를 제공한다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+Analytics는 다수의 사용자가 앱을 어떻게 사용하는지에 대한 통계 정보를 가지고 있다.
+추적할 수 있는 정보: 앱의 현재 접속자, 오류통계, 사용자 유지율, 고객들의 앱 업데이트 상태, 사용자들이 특정 페이지에 머문 시간, 이벤트 등
+이런 데이터들을 수집하면 사용자가 어떤 페이지에서 흥미를 잃었고, 어떤 페이지가 인기가 많은지 등을 찾아낼 수 있으며 맞춤 마케팅을 할 수 있다.
+```
